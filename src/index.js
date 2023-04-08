@@ -1,26 +1,10 @@
-/*!
 
-=========================================================
-* Black Dashboard React v1.2.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter,Switch, Route, Redirect } from "react-router-dom";
 
 import AdminLayout from "admin/layouts/Admin/Admin.js";
-import RTLLayout from "admin/layouts/RTL/RTL.js";
+
 
 
  import CryptoHome from "crypto/Nhome.js";
@@ -35,19 +19,30 @@ import ThemeContextWrapper from "./admin/components/ThemeWrapper/ThemeWrapper";
 import BackgroundColorWrapper from "./admin/components/BackgroundColorWrapper/BackgroundColorWrapper";
 
 
+import { StockOverviewPage } from "./stock/pages/StockOverviewPage"
+import { StockDetailPage } from "./stock/pages/StockDetailPage"
+import { WatchListContextProvider } from "./stock/context/watchListContext"
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+
+
+
 
 
 root.render(
   <ThemeContextWrapper>
     <BackgroundColorWrapper>
       <BrowserRouter>
+          <WatchListContextProvider>
+          <Route path="/stock" render={()=><StockOverviewPage />} />
+          <Route path="/detail/:symbol" render={()=><StockDetailPage />} />
+          </WatchListContextProvider>
+
           <Route path="/cryptocurrency/coins/:id" render={()=><CryptoCoin/>} exact />
           <Route path="/cryptocurrency" render={()=><CryptoHome/>} exact/>
           <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
-          <Route path="/rtl" render={(props) => <RTLLayout {...props} />} />
           {/* <Redirect from="/" to="/admin/dashboard" /> */}
       </BrowserRouter>
     </BackgroundColorWrapper>
