@@ -15,59 +15,24 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import Login from "views/Login.js";
-import Dashboard from "views/Dashboard.js";
-import Stocks from "views/Stocks.js";
-import Bonds from "views/Bonds.js";
-import Cryptocurrency from "views/Cryptocurrency.js";
-import UserProfile from "views/UserProfile.js";
-import About from "views/About.js";
-import Icons from "views/Icons.js";
-import Map from "views/Map.js";
-import Notifications from "views/Notifications.js";
-import Rtl from "views/Rtl.js";
-import TableList from "views/TableList.js";
-import Typography from "views/Typography.js";
+import Dashboard from "admin/views/Dashboard.js";
+import UserProfile from "admin/views/UserProfile.js";
+import About from "admin/views/About.js";
+import Icons from "admin/views/Icons.js";
+import Map from "admin/views/Map.js";
+import Notifications from "admin/views/Notifications.js";
+import Rtl from "admin/views/Rtl.js";
+import TableList from "admin/views/TableList.js";
+import Typography from "admin/views/Typography.js";
 
 var routes = [
-  {
-    path: "/login",
-    name: "Login",
-    rtlName: "لوحة القيادة",
-    icon: "tim-icons icon-image-02",
-    component: Login,
-    layout: "/admin"
-  },
+
   {
     path: "/dashboard",
     name: "Dashboard",
     rtlName: "لوحة القيادة",
     icon: "tim-icons icon-chart-pie-36",
     component: Dashboard,
-    layout: "/admin"
-  },
-  {
-    path: "/stocks",
-    name: "Stocks",
-    rtlName: "لوحة القيادة",
-    icon: "tim-icons icon-chart-bar-32",
-    component: Stocks,
-    layout: "/admin"
-  },
-  {
-    path: "/bonds",
-    name: "Bonds",
-    rtlName: "لوحة القيادة",
-    icon: "tim-icons icon-paper",
-    component: Bonds,
-    layout: "/admin"
-  },
-  {
-    path: "/cryptocurrency",
-    name: "Cryptocurrency",
-    rtlName: "لوحة القيادة",
-    icon: "tim-icons icon-coins",
-    component: Cryptocurrency,
     layout: "/admin"
   },
   {
