@@ -1,70 +1,17 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# The Problem Statement 
 
-## Available Scripts
+Investment opportunities have long been a privilege of the wealthy and those with extensive knowledge of the market. Traditional assets such as stocks, bonds, and cryptocurrencies are often siloed, requiring investors to navigate multiple platforms to manage their portfolios effectively. Moreover, the investment process can be challenging, leaving individuals with limited experience in a disadvantaged position.
 
-In the project directory, you can run:
+To address these issues, there is a pressing need for a web-based investment platform that provides a one-stop-shop for investors to manage their portfolios across a range of asset classes. By offering real-time market data and investment recommendations, this platform can help investors make informed decisions and maximize their returns.
 
-### `npm start`
+But that's not all - this platform can revolutionize the investment industry by creating a digital currency that incorporates all of these different assets. This innovative approach simplifies the investment process for users, streamlining the experience and democratizing access to investment opportunities.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+By offering a comprehensive and user-friendly approach to investing in a variety of assets, this investment platform can help bridge the gap between those who have access to investment opportunities and those who don't. It has the potential to level the playing field and provide a new era of financial inclusion.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+# The Solution 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Our investment platform aims to solve the problems of limited investment opportunities, siloed assets, and complex investment processes by providing a one-stop-shop for investors to manage their investments across different asset classes. Our platform will offer real-time market data and investment recommendations to help investors make informed decisions and maximize their returns. By converting all these assets into a single digital currency, we can simplify the investment process for users and provide a more streamlined experience. Our platform will democratize access to investment opportunities and help people make informed investment decisions regardless of their level of experience.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
