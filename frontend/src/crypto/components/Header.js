@@ -12,7 +12,7 @@ import {
   ThemeProvider,
 } from "@material-ui/core/styles";
 import { useHistory } from "react-router-dom";
-import { CryptoState } from "../CryptoContext";
+import CryptoContext, { CryptoState } from "../CryptoContext";
 
 const useStyles = makeStyles((theme) => ({
   title: {
@@ -40,6 +40,7 @@ function Header() {
   const history = useHistory();
 
   return (
+    <CryptoContext>
     <ThemeProvider theme={darkTheme}>
       <AppBar color="transparent" position="static">
         <Container>
@@ -49,7 +50,7 @@ function Header() {
               variant="h6"
               className={classes.title}
             >
-              Crypto Hunter
+              Fake Hackers
             </Typography>
             {/* <Button color="inherit">Login</Button> */}
             <Select
@@ -67,6 +68,7 @@ function Header() {
         </Container>
       </AppBar>
     </ThemeProvider>
+    </CryptoContext>
   );
 }
 

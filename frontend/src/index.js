@@ -17,13 +17,13 @@
 */
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter,Switch, Route, Redirect } from "react-router-dom";
 
 import AdminLayout from "admin/layouts/Admin/Admin.js";
 import RTLLayout from "admin/layouts/RTL/RTL.js";
 
-import Crypto from "./crypto/App.js"
 
+import CryptoLayouts from "crypto/layouts/Crypto.js";
 
 import "./admin/assets/scss/black-dashboard-react.scss";
 import "./admin/assets/demo/demo.css";
@@ -35,12 +35,13 @@ import BackgroundColorWrapper from "./admin/components/BackgroundColorWrapper/Ba
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+
 root.render(
   <ThemeContextWrapper>
     <BackgroundColorWrapper>
       <BrowserRouter>
         <Switch>
-          <Route path="/cryptocurrency" render={Crypto} />
+          <Route path="/cryptocurrency" render={(props) => <CryptoLayouts {...props} />}/>
           <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
           <Route path="/rtl" render={(props) => <RTLLayout {...props} />} />
           <Redirect from="/" to="/admin/dashboard" />

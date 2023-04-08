@@ -41,7 +41,7 @@ function Banner() {
               fontFamily: "Montserrat",
             }}
           >
-            Crypto Hunter
+            Fake Hackers
           </Typography>
           <Typography
             variant="subtitle2"
@@ -51,7 +51,7 @@ function Banner() {
               fontFamily: "Montserrat",
             }}
           >
-            Get all the Info regarding your favorite Crypto Currency
+            Find Informations About The Leading CryptoCurrencies
           </Typography>
         </div>
         <Carousel />
