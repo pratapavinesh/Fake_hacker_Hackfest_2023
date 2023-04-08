@@ -1,5 +1,5 @@
-# The Problem Statement 
 
+# The Problem Statement 
 
 Investment opportunities have long been a privilege of the wealthy and those with extensive knowledge of the market. Traditional assets such as stocks, bonds, and cryptocurrencies are often siloed, requiring investors to navigate multiple platforms to manage their portfolios effectively. Moreover, the investment process can be challenging, leaving individuals with limited experience in a disadvantaged position.
 
@@ -13,4 +13,5 @@ By offering a comprehensive and user-friendly approach to investing in a variety
 # The Solution 
 
 Our investment platform aims to solve the problems of limited investment opportunities, siloed assets, and complex investment processes by providing a one-stop-shop for investors to manage their investments across different asset classes. Our platform will offer real-time market data and investment recommendations to help investors make informed decisions and maximize their returns. By converting all these assets into a single digital currency, we can simplify the investment process for users and provide a more streamlined experience. Our platform will democratize access to investment opportunities and help people make informed investment decisions regardless of their level of experience.
+
 

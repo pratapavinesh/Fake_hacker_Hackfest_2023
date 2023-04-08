@@ -23,7 +23,8 @@ import AdminLayout from "admin/layouts/Admin/Admin.js";
 import RTLLayout from "admin/layouts/RTL/RTL.js";
 
 
-import CryptoLayouts from "crypto/layouts/Crypto.js";
+ import CryptoHome from "crypto/Nhome.js";
+ import CryptoCoin from "crypto/Ncoin.js";
 
 import "./admin/assets/scss/black-dashboard-react.scss";
 import "./admin/assets/demo/demo.css";
@@ -33,6 +34,9 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import ThemeContextWrapper from "./admin/components/ThemeWrapper/ThemeWrapper";
 import BackgroundColorWrapper from "./admin/components/BackgroundColorWrapper/BackgroundColorWrapper";
 
+
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 
@@ -40,12 +44,11 @@ root.render(
   <ThemeContextWrapper>
     <BackgroundColorWrapper>
       <BrowserRouter>
-        <Switch>
-          <Route path="/cryptocurrency" render={(props) => <CryptoLayouts {...props} />}/>
+          <Route path="/cryptocurrency/coins/:id" render={()=><CryptoCoin/>} exact />
+          <Route path="/cryptocurrency" render={()=><CryptoHome/>} exact/>
           <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
           <Route path="/rtl" render={(props) => <RTLLayout {...props} />} />
-          <Redirect from="/" to="/admin/dashboard" />
-        </Switch>
+          {/* <Redirect from="/" to="/admin/dashboard" /> */}
       </BrowserRouter>
     </BackgroundColorWrapper>
   </ThemeContextWrapper>
