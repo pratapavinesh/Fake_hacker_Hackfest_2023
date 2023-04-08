@@ -18,7 +18,7 @@ import {
 } from "@material-ui/core";
 import axios from "axios";
 import { CoinList } from "../config/api";
-import { useHistory } from "react-router-dom";
+import {  useHistory } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
 
 export function numberWithCommas(x) {
@@ -128,10 +128,11 @@ export default function CoinsTable() {
                     const profit = row.price_change_percentage_24h > 0;
                     return (
                       <TableRow
-                        onClick={() => history.push(`/cryptocurrency/coins/${row.id}`)}
+                        onClick={()=>history.push(`/cryptocurrency/coins/${row.id}`) }
                         className={classes.row}
                         key={row.name}
                       >
+                    
                         <TableCell
                           component="th"
                           scope="row"

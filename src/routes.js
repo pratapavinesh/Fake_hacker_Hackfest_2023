@@ -1,6 +1,4 @@
 
-import CoinsPage from "crypto/Pages/CoinPage";
-import HomePage from "crypto/Pages/HomePage";
 import Dashboard from "admin/views/Dashboard.js";
 import UserProfile from "admin/views/UserProfile.js";
 import About from "admin/views/About.js";
@@ -12,23 +10,6 @@ import TableList from "admin/views/TableList.js";
 import Typography from "admin/views/Typography.js";
 
 var routes = [
-  {
-    path: "/",
-    name: "HomePage",
-    rtlName: "لوحة القيادة",
-    icon: "tim-icons icon-chart-pie-36",
-    component: HomePage,
-    layout: "/cryptocurrency"
-  },
-  {
-    path: "/coins/:id",
-    name: "CoinsPage",
-    rtlName: "لوحة القيادة",
-    icon: "tim-icons icon-chart-pie-36",
-    component: CoinsPage,
-    layout: "/cryptocurrency"
-  },
-
   {
     path: "/dashboard",
     name: "Dashboard",

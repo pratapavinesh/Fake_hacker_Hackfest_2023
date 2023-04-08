@@ -3,11 +3,10 @@ import { makeStyles } from "@material-ui/core";
 import "../App.css";
 import { BrowserRouter } from "react-router-dom";
 import HomePage from "../Pages/HomePage";
-import CoinPage from "../Pages/CoinPage"; 
 import Header from "../components/Header";
 import "react-alice-carousel/lib/alice-carousel.css";
 import CryptoContext from "../CryptoContext";
-import { useParams } from "react-router-dom";
+import CoinPage from "crypto/Pages/CoinPage";
 const useStyles = makeStyles(() => ({
     Crypto: {
     backgroundColor: "#14161a",
@@ -16,21 +15,24 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
+
+
 const  Crypto=(path)=>{
- const { id } = useParams();
+    var pathname=path.location.pathname;
+    var idarray=pathname.split('/');
+    var id=idarray[idarray.length-1];
+    console.log(id);
   const classes = useStyles();
-  console.log("pagal ho gya hu bro");
-  console.log(path.location.pathname);
-  console.log(`/cryptocurrency/coins/${id}`);
-  console.log(useParams());
+
 
   return (
     <CryptoContext>
     <BrowserRouter>
       <div className={classes.Crypto}>
        <Header />
-       { path.location.pathname==="/cryptocurrency"?
-       <HomePage/>:<CoinPage/>}
+       {pathname==="/cryptocurrency"?<HomePage/>
+       :pathname===`/cryptocurrency/coins/${id}`?<CoinPage id={id}/>:
+       <div>404</div>}
       </div>
     </BrowserRouter>
     </CryptoContext>
