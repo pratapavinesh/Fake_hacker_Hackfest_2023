@@ -32,19 +32,19 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 
 root.render(
-  <ThemeContextWrapper>
-    <BackgroundColorWrapper>
-      <BrowserRouter>
+  <BrowserRouter>
           <WatchListContextProvider>
           <Route path="/stock" render={()=><StockOverviewPage />} />
           <Route path="/detail/:symbol" render={()=><StockDetailPage />} />
           </WatchListContextProvider>
 
+  <BackgroundColorWrapper>
+      <ThemeContextWrapper>
           <Route path="/cryptocurrency/coins/:id" render={()=><CryptoCoin/>} exact />
           <Route path="/cryptocurrency" render={()=><CryptoHome/>} exact/>
           <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
           {/* <Redirect from="/" to="/admin/dashboard" /> */}
-      </BrowserRouter>
-    </BackgroundColorWrapper>
   </ThemeContextWrapper>
+    </BackgroundColorWrapper>
+      </BrowserRouter>
 );

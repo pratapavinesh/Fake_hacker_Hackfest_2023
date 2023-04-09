@@ -77,9 +77,10 @@ export const StockList = () => {
         </tr>
       </thead>
       <tbody>
+        {console.log("yhi print nhi krunga"+stock)}
         {stock.map((stockData) => {
           return (
-            <tr style={{ cursor: "pointer" }} onClick={() => handleStockSelect(stockData.symbol)} className="table-row" key={stockData.symbol}>
+              <tr style={{ cursor: "pointer" }} onClick={() => handleStockSelect(stockData.symbol)} className="table-row" key={stockData.symbol}>
               <th scope="row">{stockData.symbol}</th>
               <td>{stockData.data.c}</td>
               <td className={`text-${changeColor(stockData.data.d)}`}>{stockData.data.d} {renderIcon(stockData.data.d)}</td>
@@ -92,6 +93,8 @@ export const StockList = () => {
                 deleteStock(stockData.symbol)
               }}>Remove</button></td>
             </tr>
+     
+            
           )
         })}
       </tbody>

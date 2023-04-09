@@ -12,17 +12,18 @@ export const AutoComplete = () => {
     const dropDownClass = search ? "show" : null
     return (
       <ul style={{
-        height: "500px",
+        height: "200px",
         overflowY: "scroll",
         overflowX: "hidden",
         cursor: "pointer"
-      }} className={`dropdown-menu ${dropDownClass}`}>
+      }} className={`dropdown-menu  ${dropDownClass}`}>
+        
         {results.map((result) => {
-          return (
+          return(
             <li onClick={() => {
               addStock(result.symbol)
               setSearch("")
-            }} key={result.symbol} className="dropdown-item">{result.description} ({result.symbol})</li>
+            }} key={result.symbol} className="dropdown-item " > {result.description} ({result.symbol})</li>
           )
         })}
       </ul>
@@ -38,7 +39,8 @@ export const AutoComplete = () => {
             q: search
           }
         })
-
+        
+   
         if (isMounted) {
           setResults(response.data.result)
         }
